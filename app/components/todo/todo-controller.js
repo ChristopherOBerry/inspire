@@ -23,6 +23,7 @@ function _drawError() {
 export default class TodoController {
 	constructor() {
 		
+		
 		_todoService.addSubscriber('error', _drawError)
 		_todoService.addSubscriber('todos', _drawTodos)
 		_todoService.getTodos()
@@ -38,6 +39,7 @@ export default class TodoController {
 		}
 
 		_todoService.addTodo(todo)
+		form.reset()
 	}
 
 	toggleTodoStatus(todoId) {

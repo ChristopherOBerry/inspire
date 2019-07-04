@@ -3,7 +3,7 @@
   font-size: 2em;
 }
 
-#weather {
+#weather,#todos,#task-column,#quote {
   background-color: rgba(241, 245, 247, 0.726)
   
 }

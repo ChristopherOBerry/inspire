@@ -13,30 +13,32 @@
 <body id="bg-image">
 	<div class="container">
 		<div class="row pt-4 text-center">
-			<div class="col-11"></div>
+			<div class="col-11">
+				<div class="row">
+					<div class="col-4 rounded pt-4 pb-4 mb-4" id="quote">
+						The Quote
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4 pt-1 pb-3 rounded" id="task-column">
+						<p id="task-count">Active Tasks:</p></p> 
+						<div id="todo-error"></div>
+						<form onsubmit="app.controllers.todoController.addTodo(event)">
+							<label for="description">Enter a task:</label>
+							<input type="text" name="description">
+							<button type="submit" class="btn btn-primary">Add Todo</button>
+						</form>
+						<div class="rounded" id="todos"></div>
+					</div>
+				</div>
+			</div>
 			<div class="col-1 rounded pt-2" id="weather">
 				Location, Temperature
 			</div>
 			
 		</div>
 	
-		<div class="row">
-			<div class="col-4" id="quote">
-				The Quote
-			</div>
-		</div>
-		<div class="row text-danger">
-			<div class="col-4">
-				A Todo List
-				<div id="todo-error"></div>
-				<form onsubmit="app.controllers.todoController.addTodo(event)">
-					<label for="description">Title:</label>
-        			<input type="text" name="description">
-        			<button type="submit" class="btn btn-primary">Add Todo</button>
-				</form>
-				<div id="todos"></div>
-			</div>
-		</div>
+		
 	
 		
 	</div>

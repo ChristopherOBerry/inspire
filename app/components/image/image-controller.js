@@ -12,6 +12,7 @@ function drawImage (){
     bg.backgroundSize = "cover"
     bg.height = "100vh"
     bg.width = "100vw"
+    // bg.opacity = ".5"
 
 }
 
