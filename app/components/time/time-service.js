@@ -6,11 +6,13 @@ const timeApi = axios.create({
 });
 
 let _state = {
-	time: []
+	time: [],
+	error: []
 	
 }
 let _subscribers = {
-	time: []
+	time: [],
+	error: []
 }
 
 function _setState(prop, data) {
@@ -22,7 +24,10 @@ function _setState(prop, data) {
 export default class TimeService{
     get Time(){
         return _state.time
-    }
+	}
+	get TimeError() {
+		return _state.error
+	}
     addSubscriber(prop, fn) {
 		_subscribers[prop].push(fn)
     }
@@ -30,5 +35,6 @@ export default class TimeService{
         timeApi.get().then(res => {
 			_setState('time', new Time(res.data))
 		})
+		.catch(err => _setState('error', err.response.data))
     }
 }
