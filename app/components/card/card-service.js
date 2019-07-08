@@ -1,4 +1,4 @@
-import Card from "/../../models/card.js";
+import Card from "../../models/card.js";
 
 const cardApi = axios.create({
 	baseURL: 'https://api.scryfall.com/cards/random/',

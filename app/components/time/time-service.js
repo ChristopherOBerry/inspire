@@ -1,4 +1,4 @@
-import Time from "/../../models/time.js";
+import Time from "../../models/time.js";
 
 const timeApi = axios.create({
 	baseURL: 'http://worldclockapi.com/api/json/mst/now/',

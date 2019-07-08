@@ -1,4 +1,4 @@
-import ImageService from "/./image-service.js";
+import ImageService from "./image-service.js";
 
 const _is = new ImageService()
 

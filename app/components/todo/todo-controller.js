@@ -1,4 +1,4 @@
-import TodoService from "/./todo-service.js";
+import TodoService from "./todo-service.js";
 
 const _todoService = new TodoService()
 
