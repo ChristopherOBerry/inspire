@@ -1,4 +1,4 @@
-import CardService from "./card-service.js";
+import CardService from "/./card-service.js";
 
 const _cardService = new CardService()
 
