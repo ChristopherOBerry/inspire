@@ -1,4 +1,4 @@
-import Image from "../../models/image.js"
+import Image from "../../models/image.js";
 const imgApi = axios.create({
 	baseURL: '//bcw-sandbox.herokuapp.com/api/images',
 	timeout: 3000

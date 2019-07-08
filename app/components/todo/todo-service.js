@@ -18,6 +18,7 @@ let _subscribers = {
 function _setState(prop, data) {
 	_state[prop] = data
 	_subscribers[prop].forEach(fn => fn())
+	
 }
 
 export default class TodoService {
@@ -31,6 +32,7 @@ export default class TodoService {
 	addSubscriber(prop, fn) {
 		_subscribers[prop].push(fn)
 	}
+	
 
 	getTodos() {
 		console.log("Getting the Todo List")
