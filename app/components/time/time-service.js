@@ -1,8 +1,8 @@
 import Time from "../../models/time.js";
 
 const timeApi = axios.create({
-	baseURL: '//worldclockapi.com/api/json/mst/now/',
-	timeout: 3000
+	baseURL: 'http://worldclockapi.com/api/json/mst/now/',
+	timeout: 10000
 });
 
 let _state = {
@@ -35,6 +35,6 @@ export default class TimeService{
         timeApi.get().then(res => {
 			_setState('time', new Time(res.data))
 		})
-		.catch(err => _setState('error', err.response.data))
+		.catch(err => console.error('error', err))
     }
 }
