@@ -1,7 +1,7 @@
 import Time from "../../models/time.js";
 
 const timeApi = axios.create({
-	baseURL: 'http://wwww.worldclockapi.com/api/json/mst/now/',
+	baseURL: 'https://www.worldclockapi.com/api/json/mst/now/',
 	timeout: 3000
 });
 
