@@ -1,4 +1,4 @@
-import Todo from "/../../models/todo.js";
+import Todo from "../../models/todo.js";
 
 // @ts-ignore
 const todoApi = axios.create({
