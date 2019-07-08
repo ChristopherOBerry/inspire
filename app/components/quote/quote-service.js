@@ -1,4 +1,4 @@
-import Quote from "../../models/quote.js"
+import Quote from "/../../models/quote.js"
 
 const _quoteApi = axios.create({
 	baseURL: '//bcw-sandbox.herokuapp.com/api/quotes',

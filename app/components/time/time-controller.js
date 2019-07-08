@@ -1,4 +1,4 @@
-import TimeService from "./time-service.js";
+import TimeService from "/./time-service.js";
 
 var _timeService = new TimeService()
 

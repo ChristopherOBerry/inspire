@@ -1,4 +1,4 @@
-import QuoteService from "./quote-service.js";
+import QuoteService from "/./quote-service.js";
 
 let _qs = new QuoteService()
 
