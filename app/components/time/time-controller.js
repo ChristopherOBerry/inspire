@@ -1,16 +1,14 @@
-import TimeService from "./time-service.js";
+function drawTime() {
+  let timeElem = document.querySelector("#clock");
 
-var _timeService = new TimeService()
-
-function drawTime(){
-    let timeElem = document.querySelector('#clock')
-    let time = _timeService.Time
-    timeElem.innerHTML = time.Template
+  timeElem.innerHTML = `
+  <h3>${moment().format("dddd, MMMM, YYYY")}</h3>
+  <h1>${moment().format("LT")}</h1>
+  `;
 }
 
 export default class TimeController {
-    constructor(){
-        _timeService.addSubscriber('time', drawTime)
-        _timeService.getTime()
-    }
+  constructor() {
+    drawTime();
+  }
 }
