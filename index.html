@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inspire</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Inspire</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+  <body id="bg-image">
+    <div class="container">
+      <div class="row pt-4 text-center">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-3 rounded pt-4 pb-4 mb-4" id="quote">
+              The Quote
+            </div>
+            <div class="col-1"></div>
+            <div
+              id="time-piece"
+              class="col-4 rounded text-justify-center d-flex flex-column p-2"
+              style="height:20vh;"
+            >
+              <h3>Hello, Chroberry</h3>
+              <h1 id="clock">Loading clock...</h1>
+            </div>
+            <div class="col-2"></div>
+            <div
+              class="col-2 rounded pt-2 pb-4 mb-4"
+              style="height:15vh; width:12vh;"
+              id="weather"
+            >
+              Location, Temperature
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4 pt-1 pb-3 rounded" id="task-column">
+              <p id="task-count">Active Tasks: <b id="todo-count"></b></p>
+              <div id="todo-error"></div>
+              <form onsubmit="app.controllers.todoController.addTodo(event)">
+                <label for="description">Enter a task:</label>
+                <input type="text" name="description" />
+                <button type="submit" class="btn btn-primary">Add Todo</button>
+              </form>
+              <div class="rounded" id="todos"></div>
+            </div>
 
-<body id="bg-image">
-	<div class="container">
-		<div class="row pt-4 text-center">
-			<div class="col-12">
-				<div class="row">
-					<div class="col-3 rounded pt-4 pb-4 mb-4" id="quote">
-						The Quote
-					</div>
-					<div class="col-1"></div>
-					<div id="time-piece" class="col-4 rounded text-justify-center d-flex flex-column p-4" style="height:20vh;">
-							<h3>Hello, Chroberry</h3>
-							<h1 id="clock">TIME</h1>
-					</div>
-					<div class="col-2"></div>
-					<div class="col-2 rounded pt-2 pb-4 mb-4" style="height:15vh; width:12vh;" id="weather">
-						Location, Temperature
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-4 pt-1 pb-3 rounded" id="task-column">
-						<p id="task-count">Active Tasks: <b id="todo-count"></b></p>
-						<div id="todo-error"></div>
-						<form onsubmit="app.controllers.todoController.addTodo(event)">
-							<label for="description">Enter a task:</label>
-							<input type="text" name="description">
-							<button type="submit" class="btn btn-primary">Add Todo</button>
-						</form>
-						<div class="rounded" id="todos"></div>
-					</div>
-					
-					
-					<div class="col-4"></div>
-					<div class="col-4 rounded pt-4 pb-4" id="random-card">
-						CARD
-						
-					</div>
-				</div>
-			</div>
-			
-			
-		</div>
-	
-		
-	</div>
-	
+            <div class="col-4"></div>
+            <div class="col-4 rounded pt-4 pb-4" id="random-card">
+              CARD
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="node_modules/moment/moment.js"></script>
+    <script type="module" src="app/main.js"></script>
+  </body>
 </html>
-<html>
+<html></html>
