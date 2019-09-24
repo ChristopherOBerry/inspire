@@ -13,50 +13,47 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-
   <body id="bg-image">
+    <nav class="navbar navbar-light text-light bg-secondary border-bottom">
+      <h1>Inspire</h1>
+    </nav>
     <div class="container">
-      <div class="row pt-4 text-center">
-        <div class="col-12">
-          <div class="row">
-            <div class="col-3 rounded pt-4 pb-4 mb-4" id="quote">
-              The Quote
-            </div>
-            <div class="col-1"></div>
-            <div
-              id="time-piece"
-              class="col-4 rounded text-justify-center d-flex flex-column p-2"
-              style="height:20vh;"
-            >
-              <h3>Hello, Chroberry</h3>
-              <h1 id="clock">Loading clock... check?</h1>
-            </div>
-            <div class="col-2"></div>
-            <div
-              class="col-2 rounded pt-2 pb-4 mb-4"
-              style="height:15vh; width:12vh;"
-              id="weather"
-            >
-              Location, Temperature
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-4 pt-1 pb-3 rounded" id="task-column">
-              <p id="task-count">Active Tasks: <b id="todo-count"></b></p>
-              <div id="todo-error"></div>
-              <form onsubmit="app.controllers.todoController.addTodo(event)">
-                <label for="description">Enter a task:</label>
-                <input type="text" name="description" />
-                <button type="submit" class="btn btn-primary">Add Todo</button>
-              </form>
-              <div class="rounded" id="todos"></div>
-            </div>
+      <div class="row text-center d-flex justify-content-end pt-2">
+        <div class="col-2 rounded" id="weather">
+          Location, Temperature
+        </div>
+      </div>
+      <div
+        class="row d-flex justify-content-center pt-4 text-center align-items-center my-5"
+      >
+        <div id="time-piece" class="col-4 mx-4 rounded p-2 border text-wrap">
+          <h4>Hello, Chroberry</h4>
+          <h1 id="clock">Loading clock... check?</h1>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center" style="height:28vh;">
+        <div class="col-lg-4 col-sm-12 col-xs-12 rounded pt-2" id="task-column">
+          <p id="task-count">Active Tasks: <b id="todo-count"></b></p>
+          <div id="todo-error"></div>
+          <form onsubmit="app.controllers.todoController.addTodo(event)">
+            <label for="description">Enter a task:</label>
+            <input type="text" name="description" />
+            <button type="submit" class="btn-sm btn-primary">Add Todo</button>
+          </form>
+          <div class="rounded" id="todos"></div>
+        </div>
 
-            <div class="col-4"></div>
-            <div class="col-4 rounded pt-4 pb-4" id="random-card">
-              CARD
-            </div>
-          </div>
+        <div
+          class="col-lg-4 col-sm-12 col-xs-12 rounded border border-dark d-flex align-items-center text-wrap"
+          id="quote"
+        >
+          The Quote
+        </div>
+        <div
+          class="col-lg-4 col-sm-12 col-xs-12 rounded pt-2 text-center"
+          id="random-card"
+        >
+          CARD
         </div>
       </div>
     </div>

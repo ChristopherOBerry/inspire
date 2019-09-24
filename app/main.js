@@ -15,9 +15,8 @@ class App {
       quoteController: new QuoteController(),
       timeController: new TimeController(),
       cardController: new CardController()
-      
-    }
+    };
   }
 }
 
-window['app'] = new App()  
+window["app"] = new App();

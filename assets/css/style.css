@@ -1,9 +1,13 @@
-#todo-error{
+#todo-error {
   color: red;
   font-size: 2em;
 }
 
-#weather,#todos,#task-column,#quote,#time-piece,#random-card {
-  background-color: rgba(241, 245, 247, 0.726)
-  
+#weather,
+#todos,
+#task-column,
+#quote,
+#time-piece,
+#random-card {
+  background-color: lightgray;
 }
